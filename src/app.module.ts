@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
+import { RoleModule } from './role/role.module';
+import { PhotoModule } from './photo/photo.module';
 
 @Module({
   imports: [
@@ -11,11 +13,13 @@ import { UserModule } from './user/user.module';
       username: 'root',
       password: '123456',
       database: 'nestjs-db',
-      synchronize: false,
+      synchronize: true,
       logging: true,
       autoLoadEntities: true
     }),
-    UserModule
+    UserModule,
+    RoleModule,
+    PhotoModule
   ],
   controllers: [],
   providers: [],
