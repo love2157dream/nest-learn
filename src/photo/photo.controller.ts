@@ -22,12 +22,12 @@ export class PhotoController {
     return this.photoService.findOne(+id);
   }
 
-  @Patch(':id')
+  @Post(':id')
   update(@Param('id') id: string, @Body() updatePhotoDto: UpdatePhotoDto) {
     return this.photoService.update(+id, updatePhotoDto);
   }
 
-  @Delete(':id')
+  @Get(':id')
   remove(@Param('id') id: string) {
     return this.photoService.remove(+id);
   }

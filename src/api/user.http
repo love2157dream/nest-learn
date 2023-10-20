@@ -1,5 +1,4 @@
 ### 添加用户
-
 POST http://localhost:1417/user/add HTTP/1.1
 Content-Type: application/json
 
@@ -7,3 +6,27 @@ Content-Type: application/json
   "username": "test006",
   "password": "123456"
 }
+
+### 添加用户角色
+POST http://localhost:1417/user/addUserRole HTTP/1.1
+Content-Type: application/json
+
+{
+  "roles": ["role14", "role15", "role16"],
+  "userId": 18
+}
+
+### 添加用户图片
+POST http://localhost:1417/user/addUserPhoto HTTP/1.1
+Content-Type: application/json
+
+{
+  "photos": ["photo11.jpg", "photo22.jpg", "photo33.jpg"],
+  "userId": 4
+}
+
+### 查询用户信息
+GET http://localhost:1417/user/list HTTP/1.1
+
+### 删除用户信息
+GET http://localhost:1417/user/delete/4 HTTP/1.1

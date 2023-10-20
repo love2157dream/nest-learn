@@ -13,6 +13,16 @@ export class UserController {
     return this.userService.create(createUserDto);
   }
 
+  @Post('addUserRole')
+  addUserRole(@Body() params: {roles: string[], userId: number}) {
+    return this.userService.newAddUserRole(params);
+  }
+
+  @Post('addUserPhoto')
+  addUserPhoto(@Body() params: {photos: string[], userId: number}) {
+    return this.userService.newAddUserPhoto(params);
+  }
+
   @Get('list')
   findAll() {
     return this.userService.findAll();
