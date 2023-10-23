@@ -1,0 +1,20 @@
+### 查询图片信息
+GET http://localhost:1417/photo/list HTTP/1.1
+
+### 添加图片及突变元数据
+POST http://localhost:1417/photo/add HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "WERFDXCVBXCEYTRE.jpg"
+}
+### 更新图片及突变元数据
+POST http://localhost:1417/photo/update/54 HTTP/1.1
+Content-Type: application/json
+
+{
+  "metadataId": 3
+}
+
+### 删除图片信息
+GET http://localhost:1417/photo/delete/57 HTTP/1.1

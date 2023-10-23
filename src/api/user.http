@@ -29,4 +29,4 @@ Content-Type: application/json
 GET http://localhost:1417/user/list HTTP/1.1
 
 ### 删除用户信息
-GET http://localhost:1417/user/delete/4 HTTP/1.1
+GET http://localhost:1417/user/delete/1 HTTP/1.1

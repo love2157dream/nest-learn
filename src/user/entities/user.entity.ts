@@ -13,7 +13,11 @@ export class User {
   @Column()
   password: string;
 
-  @OneToMany(() => Role, (role) => role.user)
+  @OneToMany(() => Role, (role) => role.user, {
+    cascade: true,
+    onDelete: 'CASCADE',
+    onUpdate: 'CASCADE'
+  })
   roles: Role[];
 
   @ManyToMany(() => Photo, {
